@@ -69,6 +69,7 @@ public class ShareFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 viewModel.getMoreShare();
+                adapter.notifyDataSetChanged();
             }
         });
 

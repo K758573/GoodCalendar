@@ -18,8 +18,8 @@ import io.reactivex.schedulers.Schedulers;
 
 public class ShareViewModel extends ViewModel {
     private MutableLiveData<List<LCObject>> shareLiveData;
-    private static final int PAGE_SIZE = 5;
-    private static int skip = 0;
+    private static final int PAGE_SIZE = 3;
+    private static int skip = PAGE_SIZE;
     LCQuery<LCObject> query;
 
     public ShareViewModel() {
