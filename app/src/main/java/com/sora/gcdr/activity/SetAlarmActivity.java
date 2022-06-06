@@ -62,7 +62,7 @@ public class SetAlarmActivity extends AppCompatActivity {
                 if (isChecked) {
                     binding.timeGroup.setVisibility(View.VISIBLE);
                     //默认选择准时提醒
-                    binding.radioButton2.setChecked(true);
+                    binding.radioButton.setChecked(true);
                 } else {
                     binding.timeGroup.setVisibility(View.GONE);
                 }

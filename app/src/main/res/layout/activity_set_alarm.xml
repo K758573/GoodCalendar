@@ -72,7 +72,8 @@
                 android:id="@+id/switchOpenAlarm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="开启提醒" />
+                android:text="开启提醒"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <RadioGroup
                 android:id="@+id/timeGroup"
@@ -86,23 +87,6 @@
                     android:layout_height="wrap_content"
                     android:text="准时提醒" />
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="提前5分钟" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="提前10分钟" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="自定义" />
             </RadioGroup>
         </LinearLayout>
 

@@ -64,12 +64,7 @@ public class MyInfoFragment extends Fragment {
         mViewModel = new ViewModelProvider(requireActivity()).get(MyInfoViewModel.class);
         binding.setData(mViewModel);
         binding.setLifecycleOwner(getViewLifecycleOwner());
-        //功能未实现
-        binding.space.setOnClickListener(this::onNoWriteFunctionClicked);
-        binding.friends.setOnClickListener(this::onNoWriteFunctionClicked);
-        binding.collections.setOnClickListener(this::onNoWriteFunctionClicked);
-        binding.settings.setOnClickListener(this::onNoWriteFunctionClicked);
-
+        
         binding.imageAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

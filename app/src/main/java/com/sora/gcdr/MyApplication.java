@@ -25,8 +25,7 @@ public class MyApplication extends Application {
         super.onCreate();
         myApplication = this;
         //LeanCloud初始化
-        LeanCloud.initialize(this, "f8Q703mVGuhFns6PpwvfxFdx-gzGzoHsz", "bqkQjMhzJ0yPJUo2dwQAlnOd", "https://f8q703mv.lc-cn-n1-shared.com");
-
+        LeanCloud.initialize(this, "1MeQSHWenrDfWkO5hMVBR2WS-gzGzoHsz", "LN9YiuL9QBrfthlETfW72Gya", "https://f8q703mv.lc-cn-n1-shared.com");
         user = new User();
         loadUser();
     }
