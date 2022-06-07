@@ -40,7 +40,7 @@ public class AddTaskActivity extends AppCompatActivity {
         //设置待办日期，弹出一个日期选择器
         binding.textViewDate.setOnClickListener(v -> new DatePickerDialog(this,
                 (view1, year, month, dayOfMonth) -> binding.textViewDate.setText(getString(R.string.year_month_day_d_d_d, year, month + 1, dayOfMonth)),
-                curYear, curMonth, curDay)
+                curYear, curMonth-1, curDay)
                 .show());
         //设置待办时间，弹出一个时间选择器
         binding.textViewTime.setOnClickListener(v -> new TimePickerDialog(this, (view12, hourOfDay, minute) -> binding.textViewTime.setText(getString(R.string.hour_minute_d_d, hourOfDay, minute)),

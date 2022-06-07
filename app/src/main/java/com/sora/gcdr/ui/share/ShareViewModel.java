@@ -51,7 +51,7 @@ public class ShareViewModel extends ViewModel {
     }
 
     @SuppressLint("CheckResult")
-    public void getMoreShare() {
+    public void getMoreShare(ShareAdapter adapter) {
         query.orderByDescending(LCObject.KEY_UPDATED_AT)
                 .skip(skip)
                 .limit(PAGE_SIZE)
@@ -60,8 +60,12 @@ public class ShareViewModel extends ViewModel {
                     @Override
                     public void accept(List<LCObject> lcObjects) throws Exception {
                         skip += PAGE_SIZE;
-                        if (lcObjects != null)
+                        if (lcObjects != null) {
                             shareLiveData.getValue().addAll(lcObjects);
+                            adapter.notifyDataSetChanged();
+                        }
+
+
                     }
                 });
     }

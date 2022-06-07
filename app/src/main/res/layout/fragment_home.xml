@@ -174,7 +174,7 @@
                     android:id="@+id/recycleView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#2563670F" />
+                    android:background="#FFFFFF" />
             </com.haibin.calendarview.CalendarLayout>
 
 

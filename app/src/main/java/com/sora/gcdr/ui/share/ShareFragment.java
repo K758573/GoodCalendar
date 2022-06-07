@@ -68,8 +68,7 @@ public class ShareFragment extends Fragment {
         binding.getmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewModel.getMoreShare();
-                adapter.notifyDataSetChanged();
+                viewModel.getMoreShare(adapter);
             }
         });
 
@@ -80,6 +79,5 @@ public class ShareFragment extends Fragment {
                 binding.swipeRefresh.setRefreshing(false);
             }
         });
-
     }
 }

@@ -75,6 +75,7 @@ public class HomeFragment extends Fragment implements
         homeViewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
         //数据绑定，部分使用
         binding.setData(homeViewModel);
+        binding.setLifecycleOwner(getViewLifecycleOwner());
         adapter = new TaskListAdapter(homeViewModel, getContext());
         binding.recycleView.setAdapter(adapter);
         binding.recycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -141,6 +142,8 @@ public class HomeFragment extends Fragment implements
         homeViewModel.setYear(calendar.getYear());
         homeViewModel.setMonth(calendar.getMonth());
         homeViewModel.setDay(calendar.getDay());
+        //出了点bug，更改界面阳历阴历
+        binding.textViewMonthDay.setText(homeViewModel.getMonth()+"月"+homeViewModel.getDay()+"日");
         //同步选中日的待办
         homeViewModel.getDayTaskLive().removeObservers(getViewLifecycleOwner());
         homeViewModel.updateDayTaskLive();
