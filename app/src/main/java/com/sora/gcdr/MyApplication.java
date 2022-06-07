@@ -11,7 +11,7 @@ import cn.leancloud.LeanCloud;
 public class MyApplication extends Application {
     private static MyApplication myApplication;
     private User user;
-
+//1
     @Override
     public void onCreate() {
         super.onCreate();
